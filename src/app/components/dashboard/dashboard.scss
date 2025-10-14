@@ -1,0 +1,42 @@
+.dashboard {
+  display: flex;
+  height: calc(100vh - 60px);
+}
+
+.sidebar {
+  width: 350px;
+  border-right: 1px solid var(--ion-color-light);
+  background: white;
+  overflow-y: auto;
+  flex-shrink: 0;
+  height: 100%;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background: white;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.content-area {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-height: fit-content;
+}
+
+.loading-state, .error-state, .no-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  text-align: center;
+  color: var(--ion-color-medium);
+}
+
+.error-state {
+  color: var(--ion-color-danger);
+}

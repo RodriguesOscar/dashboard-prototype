@@ -1,11 +1,16 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Header } from './components/header/header';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.scss'
+  standalone: true,
+  imports: [RouterOutlet, Header],
+  template: `
+    <app-header></app-header>
+    <router-outlet></router-outlet>
+  `,
+  styleUrls: ['./app.scss']
 })
 export class App {
   protected readonly title = signal('dpm-dashboard');

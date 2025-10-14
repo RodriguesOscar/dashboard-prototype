@@ -1,0 +1,40 @@
+<div class="destination-list">
+  <div class="list-header">
+    <h3>Destinations</h3>
+    <span class="count">{{ destinations.length }} locations</span>
+  </div>
+  
+  <div class="list-container">
+    <div *ngFor="let destination of destinations" 
+         class="destination-item"
+         [class.selected]="selectedDestination?.id === destination.id"
+         (click)="selectDestination(destination)">
+      
+      <div class="destination-header">
+        <div class="name">{{ destination.name }}</div>
+        <div class="type-badge">{{ destination.type }}</div>
+      </div>
+      
+      <div class="destination-stats">
+        <div class="visitor-count">
+          <strong>{{ destination.currentVisitorCount }}</strong> / {{ destination.capacity }}
+        </div>
+        <div class="status" [class]="destination.crowdingStatus">
+          {{ destination.crowdingStatus | titlecase }}
+        </div>
+      </div>
+      
+      <div class="utilization">
+        <div class="utilization-bar">
+          <div class="utilization-fill" 
+               [style.width.%]="(destination.currentVisitorCount / destination.capacity) * 100"
+               [class]="destination.crowdingStatus">
+          </div>
+        </div>
+        <span class="utilization-text">
+          {{ ((destination.currentVisitorCount / destination.capacity) * 100).toFixed(0) }}% full
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

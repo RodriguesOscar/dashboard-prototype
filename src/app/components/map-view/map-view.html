@@ -1,0 +1,51 @@
+<div class="map-view">
+  <div class="map-header">
+    <h3>Kiel Area Overview</h3>
+    <div class="map-controls">
+      <span class="selected-info" *ngIf="selectedDestination">
+        Selected: <strong>{{ selectedDestination.name }}</strong>
+      </span>
+      <span class="total-destinations">{{ destinations.length }} destinations</span>
+    </div>
+  </div>
+
+  <div class="map-container">
+    <div class="simple-map">
+      <svg viewBox="0 0 200 150" class="map-svg">
+        <path
+          d="M40,30 L80,20 L120,40 L160,30 L180,50 L170,80 L150,100 L120,120 L80,110 L50,90 L40,60 Z"
+          fill="#e8f4fd"
+          stroke="#2196f3"
+          stroke-width="2"
+        />
+
+        <circle
+          *ngFor="let dest of destinations; let i = index"
+          [attr.cx]="getMarkerX(i)"
+          [attr.cy]="getMarkerY(i)"
+          r="5"
+          [class]="'marker ' + dest.crowdingStatus"
+          [class.selected]="selectedDestination?.id === dest.id"
+          (click)="destinationSelected.emit(dest)"
+        />
+
+        <text
+          *ngFor="let dest of destinations; let i = index"
+          [attr.x]="getMarkerX(i) + 8"
+          [attr.y]="getMarkerY(i) - 8"
+          class="marker-label"
+          [class.visible]="selectedDestination?.id === dest.id"
+        >
+          {{ dest.name.split(' ')[0] }}
+        </text>
+      </svg>
+    </div>
+
+    <div class="map-legend">
+      <div class="legend-item" *ngFor="let status of ['low', 'medium', 'high', 'critical']">
+        <div class="legend-color" [class]="status"></div>
+        <span>{{ status | titlecase }}</span>
+      </div>
+    </div>
+  </div>
+</div>

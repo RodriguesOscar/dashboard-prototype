@@ -1,0 +1,139 @@
+.map-view {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.map-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--ion-color-light-shade);
+
+  h3 {
+    margin: 0;
+    color: var(--ion-color-dark);
+    font-size: 1.2em;
+  }
+
+  .map-controls {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+
+    .selected-info {
+      font-size: 0.9em;
+      color: var(--ion-color-medium);
+
+      strong {
+        color: var(--ion-color-primary);
+      }
+    }
+
+    .total-destinations {
+      font-size: 0.8em;
+      background: var(--ion-color-light);
+      color: var(--ion-color-medium);
+      padding: 4px 8px;
+      border-radius: 12px;
+    }
+  }
+}
+
+.map-container {
+  padding: 20px;
+}
+
+.simple-map {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.map-svg {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+
+  .marker {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    stroke-width: 1;
+    stroke: white;
+
+    &.low {
+      fill: var(--ion-color-success);
+    }
+    &.medium {
+      fill: var(--ion-color-warning);
+    }
+    &.high {
+      fill: var(--ion-color-danger);
+    }
+    &.critical {
+      fill: #8b0000;
+    }
+
+    &:hover {
+      r: 7;
+      stroke-width: 2;
+      filter: brightness(1.2);
+    }
+
+    &.selected {
+      r: 8;
+      stroke: var(--ion-color-primary);
+      stroke-width: 2;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    }
+  }
+
+  .marker-label {
+    font-size: 6px;
+    fill: var(--ion-color-dark);
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+
+    &.visible {
+      opacity: 1;
+    }
+  }
+}
+
+.map-legend {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75em;
+  color: var(--ion-color-medium);
+
+  .legend-color {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+
+    &.low {
+      background-color: var(--ion-color-success);
+    }
+    &.medium {
+      background-color: var(--ion-color-warning);
+    }
+    &.high {
+      background-color: var(--ion-color-danger);
+    }
+    &.critical {
+      background-color: #8b0000;
+    }
+  }
+}

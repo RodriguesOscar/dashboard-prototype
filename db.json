@@ -1,0 +1,204 @@
+{
+  "destinations": [
+    {
+      "id": 1,
+      "name": "Laboe Beach",
+      "type": "beach",
+      "coordinates": { "lat": 54.4075, "lng": 10.2277 },
+      "currentVisitorCount": 245,
+      "capacity": 500,
+      "crowdingStatus": "medium",
+      "forecast": [
+        { "hour": "14:00", "predictedVisitors": 280 },
+        { "hour": "15:00", "predictedVisitors": 310 },
+        { "hour": "16:00", "predictedVisitors": 290 }
+      ],
+      "historical": [
+        { "hour": "08:00", "visitors": 50 },
+        { "hour": "10:00", "visitors": 120 },
+        { "hour": "12:00", "visitors": 200 },
+        { "hour": "14:00", "visitors": 245 }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Holstenstraße, Kiel",
+      "type": "shopping_street",
+      "coordinates": { "lat": 54.3233, "lng": 10.1227 },
+      "currentVisitorCount": 890,
+      "capacity": 1200,
+      "crowdingStatus": "medium",
+      "forecast": [
+        { "hour": "14:00", "predictedVisitors": 910 },
+        { "hour": "15:00", "predictedVisitors": 950 },
+        { "hour": "16:00", "predictedVisitors": 1100 }
+      ],
+      "historical": [
+        { "hour": "08:00", "visitors": 200 },
+        { "hour": "10:00", "visitors": 450 },
+        { "hour": "12:00", "visitors": 700 },
+        { "hour": "14:00", "visitors": 890 }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "St. Peter-Ording Beach",
+      "type": "beach",
+      "coordinates": { "lat": 54.3033, "lng": 8.6417 },
+      "currentVisitorCount": 75,
+      "capacity": 200,
+      "crowdingStatus": "low",
+      "forecast": [
+        { "hour": "14:00", "predictedVisitors": 80 },
+        { "hour": "15:00", "predictedVisitors": 85 },
+        { "hour": "16:00", "predictedVisitors": 90 }
+      ],
+      "historical": [
+        { "hour": "08:00", "visitors": 20 },
+        { "hour": "10:00", "visitors": 40 },
+        { "hour": "12:00", "visitors": 60 },
+        { "hour": "14:00", "visitors": 75 }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Wunderino Arena",
+      "type": "stadium",
+      "coordinates": { "lat": 54.3750, "lng": 10.1356 },
+      "currentVisitorCount": 12500,
+      "capacity": 15000,
+      "crowdingStatus": "high",
+      "forecast": [
+        { "hour": "14:00", "predictedVisitors": 12800 },
+        { "hour": "15:00", "predictedVisitors": 13500 },
+        { "hour": "16:00", "predictedVisitors": 14200 }
+      ],
+      "historical": [
+        { "hour": "08:00", "visitors": 2000 },
+        { "hour": "10:00", "visitors": 5000 },
+        { "hour": "12:00", "visitors": 8500 },
+        { "hour": "14:00", "visitors": 12500 }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Kieler Schloss",
+      "type": "historical_site",
+      "coordinates": { "lat": 54.3258, "lng": 10.1406 },
+      "currentVisitorCount": 180,
+      "capacity": 300,
+      "crowdingStatus": "medium",
+      "forecast": [
+        { "hour": "14:00", "predictedVisitors": 200 },
+        { "hour": "15:00", "predictedVisitors": 220 },
+        { "hour": "16:00", "predictedVisitors": 190 }
+      ],
+      "historical": [
+        { "hour": "08:00", "visitors": 40 },
+        { "hour": "10:00", "visitors": 90 },
+        { "hour": "12:00", "visitors": 140 },
+        { "hour": "14:00", "visitors": 180 }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Kieler Woche Hauptbühne",
+      "type": "event_venue",
+      "coordinates": { "lat": 54.3270, "lng": 10.1470 },
+      "currentVisitorCount": 4500,
+      "capacity": 5000,
+      "crowdingStatus": "critical",
+      "forecast": [
+        { "hour": "14:00", "predictedVisitors": 4800 },
+        { "hour": "15:00", "predictedVisitors": 4900 },
+        { "hour": "16:00", "predictedVisitors": 5000 }
+      ],
+      "historical": [
+        { "hour": "08:00", "visitors": 800 },
+        { "hour": "10:00", "visitors": 2000 },
+        { "hour": "12:00", "visitors": 3500 },
+        { "hour": "14:00", "visitors": 4500 }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Botanischer Garten",
+      "type": "park",
+      "coordinates": { "lat": 54.3414, "lng": 10.1222 },
+      "currentVisitorCount": 120,
+      "capacity": 400,
+      "crowdingStatus": "low",
+      "forecast": [
+        { "hour": "14:00", "predictedVisitors": 130 },
+        { "hour": "15:00", "predictedVisitors": 140 },
+        { "hour": "16:00", "predictedVisitors": 125 }
+      ],
+      "historical": [
+        { "hour": "08:00", "visitors": 30 },
+        { "hour": "10:00", "visitors": 60 },
+        { "hour": "12:00", "visitors": 90 },
+        { "hour": "14:00", "visitors": 120 }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Hauptbahnhof Kiel",
+      "type": "transportation",
+      "coordinates": { "lat": 54.3147, "lng": 10.1328 },
+      "currentVisitorCount": 2800,
+      "capacity": 3500,
+      "crowdingStatus": "high",
+      "forecast": [
+        { "hour": "14:00", "predictedVisitors": 3000 },
+        { "hour": "15:00", "predictedVisitors": 3200 },
+        { "hour": "16:00", "predictedVisitors": 3400 }
+      ],
+      "historical": [
+        { "hour": "08:00", "visitors": 1500 },
+        { "hour": "10:00", "visitors": 1800 },
+        { "hour": "12:00", "visitors": 2200 },
+        { "hour": "14:00", "visitors": 2800 }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Schrevenpark",
+      "type": "park",
+      "coordinates": { "lat": 54.3322, "lng": 10.1278 },
+      "currentVisitorCount": 85,
+      "capacity": 250,
+      "crowdingStatus": "low",
+      "forecast": [
+        { "hour": "14:00", "predictedVisitors": 90 },
+        { "hour": "15:00", "predictedVisitors": 95 },
+        { "hour": "16:00", "predictedVisitors": 100 }
+      ],
+      "historical": [
+        { "hour": "08:00", "visitors": 20 },
+        { "hour": "10:00", "visitors": 45 },
+        { "hour": "12:00", "visitors": 65 },
+        { "hour": "14:00", "visitors": 85 }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Ostseehalle",
+      "type": "event_venue",
+      "coordinates": { "lat": 54.3211, "lng": 10.1289 },
+      "currentVisitorCount": 3800,
+      "capacity": 4500,
+      "crowdingStatus": "high",
+      "forecast": [
+        { "hour": "14:00", "predictedVisitors": 4000 },
+        { "hour": "15:00", "predictedVisitors": 4200 },
+        { "hour": "16:00", "predictedVisitors": 4300 }
+      ],
+      "historical": [
+        { "hour": "08:00", "visitors": 500 },
+        { "hour": "10:00", "visitors": 1500 },
+        { "hour": "12:00", "visitors": 2800 },
+        { "hour": "14:00", "visitors": 3800 }
+      ]
+    }
+  ]
+}

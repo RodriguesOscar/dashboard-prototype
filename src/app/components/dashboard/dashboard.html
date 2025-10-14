@@ -1,0 +1,45 @@
+<div class="dashboard">
+  <!-- Destination List Sidebar -->
+  <div class="sidebar">
+    <app-destination-list
+      [destinations]="destinations"
+      [selectedDestination]="selectedDestination"
+      (destinationSelected)="onDestinationSelected($event)"
+    >
+    </app-destination-list>
+  </div>
+
+  <!-- Main Content Area -->
+  <div class="main-content">
+    @if (isLoading) {
+    <div class="loading-state">
+      <ion-spinner></ion-spinner>
+      <p>Loading destinations...</p>
+    </div>
+    } @if (error) {
+    <div class="error-state">
+      <p>{{ error }}</p>
+      <ion-button (click)="loadDestinations()">Retry</ion-button>
+    </div>
+    } @if (!isLoading && !error) {
+    <div class="content-area">
+      <!-- Map View -->
+      <app-map-view
+        [destinations]="destinations"
+        [selectedDestination]="selectedDestination"
+        (destinationSelected)="onDestinationSelected($event)"
+      >
+      </app-map-view>
+
+      <!-- Destination Details -->
+      @if (selectedDestination) {
+      <app-destination-detail [destination]="selectedDestination"> </app-destination-detail>
+      } @else {
+      <div class="no-selection">
+        <p>Select a destination to view details</p>
+      </div>
+      }
+    </div>
+    }
+  </div>
+</div>

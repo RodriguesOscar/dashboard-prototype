@@ -1,0 +1,55 @@
+@if(destination){
+<div class="destination-detail">
+  <div class="detail-header">
+    <h3>{{ destination.name }}</h3>
+    <div class="type-badge">{{ destination.type | titlecase }}</div>
+  </div>
+
+  <div class="detail-grid">
+    <div class="stat-card">
+      <div class="stat-value">{{ destination.currentVisitorCount }}</div>
+      <div class="stat-label">Current Visitors</div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-value">{{ destination.capacity }}</div>
+      <div class="stat-label">Total Capacity</div>
+    </div>
+
+    <div class="stat-card crowding">
+      <div class="stat-value" [class]="destination.crowdingStatus">
+        {{ destination.crowdingStatus | titlecase }}
+      </div>
+      <div class="stat-label">Crowding Level</div>
+    </div>
+  </div>
+
+  <div class="utilization-section">
+    <h4>Capacity Utilization</h4>
+    <div class="utilization-bar-large">
+      <div
+        class="utilization-fill"
+        [style.width.%]="(destination.currentVisitorCount / destination.capacity) * 100"
+        [class]="destination.crowdingStatus"
+      ></div>
+    </div>
+    <div class="utilization-text">
+      {{ ((destination.currentVisitorCount / destination.capacity) * 100).toFixed(1) }}% full ({{
+        destination.currentVisitorCount
+      }}
+      of {{ destination.capacity }})
+    </div>
+  </div>
+  @if(destination.forecast && destination.forecast.length > 0){
+  <div class="forecast-section">
+    <h4>Visitor Forecast</h4>
+    <div class="forecast-list">
+      <div *ngFor="let point of destination.forecast" class="forecast-item">
+        <span class="time">{{ point.hour }}</span>
+        <span class="prediction">{{ point.predictedVisitors }} visitors</span>
+      </div>
+    </div>
+  </div>
+  }
+</div>
+}
